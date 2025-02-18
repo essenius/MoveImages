@@ -22,7 +22,7 @@ public static class FilterFactory
         {
             "ORIENTATION" => new OrientationFilter(parameter),
             "MINSIZE" => new MinSizeFilter(int.Parse(parameter)),
-            "MEGAPIXELS" => new MinMegaPixelFilter(parameter),
+            "MEGAPIXELS" => new MegaPixelFilter(parameter),
             _ => throw new ArgumentException("Unrecognized filter")
         };
     }

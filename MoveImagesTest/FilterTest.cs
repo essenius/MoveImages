@@ -82,12 +82,12 @@ public class FilterTest
     [TestMethod]
     public void TestFilterMinMegaPixelMatch()
     {
-        var filter1 = new MinMegaPixelFilter("0.5");
+        var filter1 = new MegaPixelFilter("0.5");
         var image1 = new ImageMetaData(new SKImageInfo(720, 720));
         var image2 = new ImageMetaData(new SKImageInfo(640, 480));
         Assert.IsTrue(filter1.Match(image1));
         Assert.IsFalse(filter1.Match(image2));
-        var filter2 = new MinMegaPixelFilter(">0.5");
+        var filter2 = new MegaPixelFilter(">0.5");
         Assert.IsTrue(filter2.Match(image1));
         Assert.IsFalse(filter2.Match(image2));
     }
@@ -95,7 +95,7 @@ public class FilterTest
     [TestMethod]
     public void TestFilterMaxMegaPixelMatch()
     {
-        var filter = new MinMegaPixelFilter("<0.5");
+        var filter = new MegaPixelFilter("<0.5");
         var image1 = new ImageMetaData(new SKImageInfo(640, 480));
         var image2 = new ImageMetaData(new SKImageInfo(720, 720));
         Assert.IsTrue(filter.Match(image1));
@@ -179,7 +179,7 @@ public class FilterTest
         var fc = new FilterCollection(arguments);
         Assert.IsTrue(fc.Filters.Count == 2);
         Assert.AreEqual(typeof(OrientationFilter), fc.Filters[0].GetType());
-        Assert.AreEqual(typeof(MinMegaPixelFilter), fc.Filters[1].GetType());
+        Assert.AreEqual(typeof(MegaPixelFilter), fc.Filters[1].GetType());
         Assert.AreEqual("landscape", fc.TargetFolder);
     }
 

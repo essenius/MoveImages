@@ -14,12 +14,12 @@ using System.Runtime.Versioning;
 namespace MoveImages;
 
 [SupportedOSPlatform("windows")]
-public class MinMegaPixelFilter : IFilter
+public class MegaPixelFilter : IFilter
 {
     private readonly double _minMegaPixels;
     private readonly bool _lower;
 
-    public MinMegaPixelFilter(string parameter)
+    public MegaPixelFilter(string parameter)
     {
         _lower = false;
         var start = 0;
