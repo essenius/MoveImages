@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "MoveImagesTest": {
+      "commandName": "Project",
+      "commandLineArgs": "/orientation:portrait /minsize:640",
+      "workingDirectory": "c:\\data\\images"
+    }
+  }
+}

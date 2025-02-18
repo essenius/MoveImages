@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "MoveImages": {
+      "commandName": "Project",
+      "commandLineArgs": "\"/orientation:portrait\" r:\\media\\images\\nature\\portrait",
+      "workingDirectory": "r:\\media\\images\\nature\\landscape",
+      "remoteDebugEnabled": false,
+      "sqlDebugging": false
+    }
+  }
+}
